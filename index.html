@@ -61,7 +61,7 @@
     </nav>
 
     <main role="main">
-      <div id="jumbotron" class="jumbotron plum-overlay"> 
+      <div id="jumbotron" class="jumbotron"> 
         <div class="container">
           <h1 class="display-3">Jumbotron Test</h1>
           <p>This is just a test</p>
@@ -84,10 +84,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script>
         $(".btn-green").on("click", function () {
-            $("#jumbotron").removeClass("plum-overlay").addClass("green-overlay");            
+            $("#jumbotron").toggleClass("green-overlay");            
         });
         $(".btn-plum").on("click", function () {
-            $("#jumbotron").removeClass("green-overlay").addClass("plum-overlay");            
+            $("#jumbotron").toggleClass("plum-overlay");            
         })
     </script>
     
