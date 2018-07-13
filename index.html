@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+        padding-top: 3.5rem;
+        color: white;
+        }
+
+        .jumbotron {
+            background-image: url(grayscale.png);
+            background-size: 100%;
+            background-blend-mode: overlay;
+
+        }
+
+        .green-overlay {
+            background-color: green;
+        }
+
+        .plum-overlay {
+            background-color: plum;
+        }
+
+        .btn-green {
+            background-color: green;
+            color: white;
+        }
+
+        .btn-plum {
+            background-color: plum;
+            color: white;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main">
+      <div id="jumbotron" class="jumbotron plum-overlay"> 
+        <div class="container">
+          <h1 class="display-3">Jumbotron Test</h1>
+          <p>This is just a test</p>
+        </div>
+      </div>
+
+      <div class="container">
+
+      </div> <!-- /container -->
+
+      <button type="button" class="btn btn-green">Green Overlay</button>
+      <button type="button" class="btn btn-plum">Plum Overlay</button>
+
+      <a href="https://github.com/artawood/background-blended-mode" target="_blank">Fork it on github</a>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script>
+        $(".btn-green").on("click", function () {
+            $("#jumbotron").removeClass("plum-overlay").addClass("green-overlay");            
+        });
+        $(".btn-plum").on("click", function () {
+            $("#jumbotron").removeClass("green-overlay").addClass("plum-overlay");            
+        })
+    </script>
+    
+</html>
